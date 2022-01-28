@@ -1,0 +1,16 @@
+.navbar {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    box-sizing: border-box;
+    padding: 0 80px;
+
+    // &__logo {
+    //     padding-left: 80px;
+    // }
+
+    &__items {
+        display: flex;
+    }
+}
