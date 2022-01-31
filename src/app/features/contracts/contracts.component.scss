@@ -1,9 +1,9 @@
 .contracts {
-   margin: 0 16px;
+    margin: 0 16px;
 
-   &--large {
+    &--large {
         margin: 0 180px;
-   }
+    }
 
     &__title {
         color: var(--black);
@@ -13,6 +13,41 @@
         &--large {
             font-size: 32px;
             padding: 60px 0px;
+        }
+    }
+
+    &__table-cell-photo {
+        > img {
+            width: 41px;
+            height: 41px;
+            border-radius: 50%;
+            margin-right: 10px;
+        }
+    }
+    
+    &__table-cell-status {
+        background: rgba(54, 207, 130, 0.18);
+        border-radius: 20px;
+        width: 100%;
+        height: 100%;
+        color: #36CF82;
+        padding: 3px;
+
+        .status-circle {
+            background-color: #36CF82;
+            width: 5px;
+            height: 5px;
+            border-radius: 50%;
+            margin: 0px 8px;
+        }
+
+        &--pending {
+            background: rgba(242, 157, 66, 0.3);
+            color: #F29D42;
+
+            .status-circle {
+                background-color: #F29D42;
+            }
         }
     }
 }

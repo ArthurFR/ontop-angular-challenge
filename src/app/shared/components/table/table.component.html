@@ -31,6 +31,19 @@
             <span *ngIf="cell.type === 'date'">{{row[cell.value] | date}}</span>
             <span *ngIf="cell.type === 'price'">{{row[cell.value] | currency:'USD'}}</span>
             <span *ngIf="cell.type === 'action'" class="table__action"><mat-icon>more_vert</mat-icon></span>
+            <ng-template #defaultCustomLarge>
+                {{row[cell.value]}}
+            </ng-template>
+            <span *ngIf="cell.type === 'custom1'" class="table__custom">
+                <ng-container 
+                  *ngTemplateOutlet="customTemplate1 ? customTemplate1: defaultCustomLarge; context: { $implicit: row[cell.value] }"
+                > </ng-container>
+            </span>
+            <span *ngIf="cell.type === 'custom2'" class="table__custom">
+                <ng-container 
+                  *ngTemplateOutlet="customTemplate2 ? customTemplate2: defaultCustomLarge; context: { $implicit: row[cell.value] }"
+                > </ng-container>
+            </span>
         </div>
     </div>
 </div>
@@ -52,5 +65,18 @@
         <div *ngIf="cell.type === 'date'">{{row[cell.value] | date}}</div>
         <div *ngIf="cell.type === 'price'">{{row[cell.value] | currency:'USD'}}</div>
         <div *ngIf="cell.type === 'action'" class="table__action"><mat-icon>more_horiz</mat-icon></div>
+        <ng-template #defaultCustom>
+            {{row[cell.value]}}
+        </ng-template>
+        <div *ngIf="cell.type === 'custom1'" class="table-small__custom">
+            <ng-container 
+              *ngTemplateOutlet="customTemplate1 ? customTemplate1: defaultCustom; context: { $implicit: row[cell.value] }"
+            > </ng-container>
+        </div>
+        <span *ngIf="cell.type === 'custom2'" class="table-small__custom">
+            <ng-container 
+              *ngTemplateOutlet="customTemplate2 ? customTemplate2: defaultCustom; context: { $implicit: row[cell.value] }"
+            > </ng-container>
+        </span>
     </div>
 </div>

@@ -16,5 +16,30 @@
     <app-table
         [tableConfig]="tableConfig"
         [tableData]="tableData"
-    ></app-table>
+        [customTemplate1]="cellWithPhoto"
+        [customTemplate2]="cellWithStatus"
+    >
+        <ng-template #cellWithPhoto let-profile>
+            <div
+                class="contracts__table-cell-photo"
+                fxLayout="row"
+                fxLayoutAlign="start center"
+            >
+                <img src="../../../assets/png/profile.png" fxHide fxShow.gt-xs="true" />
+                {{profile.name}}
+            </div>
+        </ng-template>
+
+        <ng-template #cellWithStatus let-status>
+            <div
+                class="contracts__table-cell-status"
+                fxLayout="row"
+                fxLayoutAlign="start center"
+                [ngClass]="{'contracts__table-cell-status--pending': status != 'Active'}"
+            >
+                <div class="status-circle"></div>
+                {{status}}
+            </div>
+        </ng-template>
+    </app-table>
 </div>

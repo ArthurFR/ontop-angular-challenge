@@ -1,4 +1,4 @@
-import { Component, Input, OnInit } from '@angular/core';
+import { Component, Input, TemplateRef } from '@angular/core';
 import { TableConfig } from './table.types';
 
 @Component({
@@ -8,5 +8,7 @@ import { TableConfig } from './table.types';
 })
 export class TableComponent {
   @Input() tableConfig: TableConfig = [];
-  @Input() tableData: Record<string, any>[] = []
+  @Input() tableData: Record<string, any>[] = [];
+  @Input() customTemplate1: TemplateRef<any> | undefined;
+  @Input() customTemplate2: TemplateRef<any> | undefined;
 }

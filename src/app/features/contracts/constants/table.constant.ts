@@ -3,7 +3,7 @@ import { TableConfig } from "src/app/shared/components/table/table.types";
 export const contractsTableConfig: TableConfig = [
     {
         label: 'Contractor name',
-        type: 'string',
+        type: 'custom1',
         value: 'contractorName',
         size: 20,
     },
@@ -27,7 +27,7 @@ export const contractsTableConfig: TableConfig = [
     },
     {
         label: 'Status',
-        type: 'string',
+        type: 'custom2',
         value: 'status',
         size: 20,
     },
@@ -42,21 +42,30 @@ export const contractsTableConfig: TableConfig = [
 
 export const contractsTableData = [
     {
-        contractorName: 'Darlene Robertson',
+        contractorName: {
+            picture: '',
+            name: 'Darlene Robertson'
+        },
         type: 'Traditional',
         startDate: new Date(),
         amount: 200,
         status: 'Active'
     },
     {
-        contractorName: 'Darlene Robertson',
+        contractorName: {
+            picture: '',
+            name: 'Darlene Robertson'
+        },
         type: 'Traditional',
         startDate: new Date(),
         amount: 200,
         status: 'Active'
     },
     {
-        contractorName: 'Darlene Robertson',
+        contractorName: {
+            picture: '',
+            name: 'Darlene Robertson'
+        },
         type: 'Traditional',
         startDate: new Date(),
         amount: 200,

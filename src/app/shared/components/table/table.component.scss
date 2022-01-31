@@ -23,6 +23,10 @@
     &__action {
         cursor: pointer;
     }
+
+    &__custom {
+        width: 100%;
+    }
 }
 
 .table-small {
@@ -45,6 +49,10 @@
 
     &__header {
         font-weight: bold;
+        width: 50%;
+    }
+
+    &__custom {
         width: 50%;
     }
 }
