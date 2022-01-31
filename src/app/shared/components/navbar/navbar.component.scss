@@ -1,16 +1,58 @@
 .navbar {
     width: 100%;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
     box-sizing: border-box;
-    padding: 0 80px;
+    padding: 0 16px;
+    background-color: var(--white);
 
-    // &__logo {
-    //     padding-left: 80px;
-    // }
+    &--large {
+        padding: 0 80px;
+    }
 
     &__items {
-        display: flex;
+        flex-grow: 2;
+    }
+
+    &__item {
+        color: var(--text-color);
+        font-size: 18px;
+        position: relative;
+        cursor: pointer;
+        transition-duration: 0.3s;
+
+        &--name {
+            padding: 0 5px;
+        }
+
+        &--selected, &:hover {
+            color: var(--main-color);
+        }
+
+        &--selected-bar {
+            cursor: auto;
+            width: 100%;
+            background-color: var(--main-color);
+            height: 5px;
+            position: absolute;
+            top: 61px;
+        }
+    }
+
+    &__profile {
+        color: var(--text-color);
+        margin: 20px 0px;
+        padding-left: 20px;
+        cursor: pointer;
+    }
+
+    &__menu {
+        cursor: pointer;
+        width: 30px;
+        padding: 20px 0px;
+
+        &--bar {
+            height: 4px;
+            background-color: var(--main-color);
+            margin: 4px 0;
+        }
     }
 }

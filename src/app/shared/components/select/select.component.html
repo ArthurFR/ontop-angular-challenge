@@ -1,0 +1,7 @@
+<div class="select" fxLayout="row" fxLayoutAlign="space-between center">
+    <div fxLayout="row" fxLayoutAlign="center center">
+        <mat-icon *ngIf="icon" class="select__icon">{{icon}}</mat-icon>
+        <div class="select__text">{{placeholder}}</div>
+    </div>
+    <mat-icon *ngIf="!removeRightIcon">expand_more</mat-icon>
+</div>

@@ -1,0 +1,18 @@
+.contracts {
+   margin: 0 16px;
+
+   &--large {
+        margin: 0 180px;
+   }
+
+    &__title {
+        color: var(--black);
+        font-size: 24px;
+        padding: 45px 0px 28px 0px;
+        
+        &--large {
+            font-size: 32px;
+            padding: 60px 0px;
+        }
+    }
+}

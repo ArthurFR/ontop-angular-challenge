@@ -1,23 +1,25 @@
 interface NavbarItemsInterface {
     icon: string,
     name: string,
+    selected?: boolean,
 }
 
 export const NavbarItems: NavbarItemsInterface[] = [
     {
-        icon: '',
-        name: 'Contracts'
+        icon: 'perm_identity',
+        name: 'Contracts',
+        selected: true,
     },
     {
-        icon: '',
+        icon: 'description',
         name: 'Documents'
     },
     {
-        icon: '',
+        icon: 'credit_card',
         name: 'Payout'
     },
     {
-        icon: '',
+        icon: 'event',
         name: 'Time'
     }
 ];

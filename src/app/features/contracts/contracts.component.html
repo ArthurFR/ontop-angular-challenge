@@ -1,1 +1,15 @@
-<p>contracts works!</p>
+<div
+    class="contracts"
+    [ngClass.gt-sm]="{'contracts--large': true}"
+>
+    <div
+        class="contracts__title"
+        fxLayout="column"
+        fxLayoutAlign="center center"
+        [ngClass.gt-sm]="{'contracts__title--large': true}"
+    >
+        Contracts for {{'{{ Client }}'}}  
+    </div>
+
+    <app-contracts-filter></app-contracts-filter>
+</div>

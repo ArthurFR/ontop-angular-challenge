@@ -1,0 +1,74 @@
+<div class="contracts-filter" fxLayout="column">
+    
+    <div
+        fxLayout="column"
+        fxLayout.gt-xs="row"
+        fxLayoutAlign="space-between center"
+        class="contracts-filter__search"
+    >
+        <app-input
+            fxFlex="100%"
+            fxFlex.gt-sm="80%"
+            placeholder="Search"
+            icon="search"
+        ></app-input>
+        <div
+            fxFlex.gt-sm="20%"
+            fxLayout="row"
+            fxLayoutAlign="space-around center"
+            fxLayoutAlign.gt-sm="start center"
+        >
+            <app-button
+                color="secondary"
+            >
+                <mat-icon>filter_list</mat-icon>
+                Filter
+            </app-button>
+            <app-button>
+                <mat-icon>add</mat-icon>
+                New hire
+            </app-button>
+        </div>
+    </div>
+
+    <div
+        class="contracts-filter__filters"
+        fxLayout="column"
+        fxLayout.gt-xs="row"
+        fxLayoutAlign="space-between center"
+    >
+        <app-select 
+            icon="event"
+            placeholder="Created On"
+            fxFlex.gt-sm="25%"
+            class="contracts-filter__filter"
+        ></app-select>
+        <app-select
+            placeholder="Contract type"
+            fxFlex.gt-sm="20%"
+            class="contracts-filter__filter"
+        ></app-select>
+        <app-select 
+            placeholder="Contractor Name"
+            [removeRightIcon]="true"
+            fxFlex.gt-sm="25%"
+            class="contracts-filter__filter"
+        ></app-select>
+        <app-select 
+            placeholder="Status"
+            fxFlex.gt-sm="20%"
+            class="contracts-filter__filter"
+        ></app-select>
+
+        <div
+            fxLayout="row"
+            fxHide.gt-sm="true"
+            fxLayoutAlign="center center"
+            class="contracts-filter__clear-filter"
+        >
+            <mat-icon>delete</mat-icon>
+            Clear filters
+        </div>
+    </div>
+
+</div>

@@ -6,12 +6,6 @@ import { NavbarItems } from './navbar-items.constant';
   templateUrl: './navbar.component.html',
   styleUrls: ['./navbar.component.scss']
 })
-export class NavbarComponent implements OnInit {
+export class NavbarComponent {
   navbarItems = NavbarItems;
-
-  constructor() { }
-
-  ngOnInit(): void {
-  }
-
 }

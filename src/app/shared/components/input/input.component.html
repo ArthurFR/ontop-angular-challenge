@@ -1,0 +1,7 @@
+<mat-icon *ngIf="icon" class="input__icon">{{icon}}</mat-icon>
+<input
+    class="input"
+    type="text"
+    [placeholder]="placeholder"
+    [ngClass]="{'input--with-icon': icon}"
+>

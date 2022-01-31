@@ -1,17 +1,51 @@
-<div class="navbar">
+<div
+    class="navbar"
+    fxLayout="row" 
+    fxLayoutAlign="space-between center"
+    [ngClass.gt-sm]="{'navbar--large': true}"
+>
     <div class="navbar__logo">
         <img src="../../../../assets/png/logo.png" />
     </div>
 
-    <div class="navbar__items">
-        <div *ngFor="let navbarItem of navbarItems">
-            {{ navbarItem.name }}
+    <div
+        class="navbar__items"
+        fxLayout="row"
+        fxLayoutAlign="space-around center"
+        fxHide.lt-sm="true"
+    >
+        <div
+            *ngFor="let navbarItem of navbarItems"
+            class="navbar__item"
+            fxLayout="row"
+            fxLayoutAlign="center center"
+            [ngClass]="{'navbar__item--selected': navbarItem.selected}"
+        >
+            <mat-icon>{{ navbarItem.icon }}</mat-icon>
+            <div class="navbar__item--name">{{ navbarItem.name }}</div>
+            <mat-icon>expand_more</mat-icon>
+            <div 
+                *ngIf="navbarItem.selected"
+                class="navbar__item--selected-bar"
+            ></div>
         </div>
     </div>
 
-    <div class="navbar__profile">
+    <div
+        class="navbar__profile"
+        fxLayout="row"
+        fxLayoutAlign="center center"
+        fxHide.lt-sm="true"
+    >
         <div class="navbar__profile-picture">
             <img src="../../../../assets/png/profile-picture.png" />
         </div>
+        <mat-icon>expand_more</mat-icon>
+    </div>
+
+    <div class="navbar__menu" fxHide fxShow.lt-sm="true">
+        <div class="navbar__menu--bar"></div>
+        <div class="navbar__menu--bar"></div>
+        <div class="navbar__menu--bar"></div>
     </div>
 </div>
