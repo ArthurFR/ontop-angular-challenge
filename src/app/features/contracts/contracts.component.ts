@@ -1,15 +1,12 @@
-import { Component, OnInit } from '@angular/core';
+import { Component } from '@angular/core';
+import { contractsTableConfig, contractsTableData } from './constants/table.constant';
 
 @Component({
   selector: 'app-contracts',
   templateUrl: './contracts.component.html',
   styleUrls: ['./contracts.component.scss']
 })
-export class ContractsComponent implements OnInit {
-
-  constructor() { }
-
-  ngOnInit(): void {
-  }
-
+export class ContractsComponent {
+  tableConfig = contractsTableConfig;
+  tableData = contractsTableData;
 }

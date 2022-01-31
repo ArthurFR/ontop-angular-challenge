@@ -1,0 +1,56 @@
+<div class="table" fxHide fxShow.gt-xs="true">
+    <div 
+        fxLayout="row"
+        fxLayoutAlign="space-between center"
+        class="table__header"
+    >
+        <div
+            fxLayout="row"
+            fxLayoutAlign="center center"
+            class="table_header-cell"
+            *ngFor="let item of tableConfig"
+            [ngStyle]="{'width': item.size + '%'}"
+        >
+            {{item.label}}
+        </div>
+    </div>
+    <div 
+        class="table__row"
+        *ngFor="let row of tableData"
+        fxLayout="row"
+        fxLayoutAlign="space-between center"
+    >
+        <div 
+            fxLayout="row"
+            fxLayoutAlign="center center"
+            class="table_row-cell" 
+            *ngFor="let cell of tableConfig"
+            [ngStyle]="{'width': cell.size + '%'}"
+        >
+            <span *ngIf="cell.type === 'string'">{{row[cell.value]}}</span>
+            <span *ngIf="cell.type === 'date'">{{row[cell.value] | date}}</span>
+            <span *ngIf="cell.type === 'price'">{{row[cell.value] | currency:'USD'}}</span>
+            <span *ngIf="cell.type === 'action'" class="table__action"><mat-icon>more_vert</mat-icon></span>
+        </div>
+    </div>
+</div>
+
+<div 
+    class="table-small"
+    fxShow 
+    fxHide.gt-xs="true"
+    *ngFor="let row of tableData"
+>
+    <div 
+        *ngFor="let cell of tableConfig"
+        class="table-small__row"
+        fxLayout="row"
+        fxLayoutAlign="start center"
+    >
+        <div class="table-small__header" >{{cell.label}}</div>
+        <div *ngIf="cell.type === 'string'">{{row[cell.value]}}</div>
+        <div *ngIf="cell.type === 'date'">{{row[cell.value] | date}}</div>
+        <div *ngIf="cell.type === 'price'">{{row[cell.value] | currency:'USD'}}</div>
+        <div *ngIf="cell.type === 'action'" class="table__action"><mat-icon>more_horiz</mat-icon></div>
+    </div>
+</div>
