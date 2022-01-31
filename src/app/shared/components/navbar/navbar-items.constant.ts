@@ -1,4 +1,4 @@
-interface NavbarItemsInterface {
+export interface NavbarItemsInterface {
     icon: string,
     name: string,
     selected?: boolean,

@@ -22,4 +22,11 @@ describe('InputComponent', () => {
   it('should create', () => {
     expect(component).toBeTruthy();
   });
+
+  it('should render mat-icon with description in it', () => {
+    component.icon = 'description';
+    fixture.detectChanges();
+    const compiled = fixture.nativeElement as HTMLElement;
+    expect(compiled.querySelector('mat-icon')?.textContent).toContain('description');
+  });
 });
